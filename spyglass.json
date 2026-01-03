@@ -1,0 +1,12 @@
+{
+	"lint": {
+		"undeclaredSymbol": [
+			{
+				"if": [
+					{ "category": ["function"], "excludeNamespace": "julliot" }
+				],
+				"then": { "report": "warning" }
+			}
+		]
+	}
+}
