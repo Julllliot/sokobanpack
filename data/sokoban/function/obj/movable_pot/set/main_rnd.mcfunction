@@ -3,8 +3,8 @@
 #
 # @context any
 # @macros
-#   coords: objects coords array
-#   qty: quantity of objects (range=1..4)
+#   coords: (string) 'x,y,z'
+#   qty: (int) 1..4; quantity of objects
 
 execute if entity @e[type=marker,tag=movable_pot] run function sokoban:obj/movable_pot/init
 
@@ -18,8 +18,6 @@ $function julliot:setobj/main {\
   temp:'mvbpot'\
 }
 
-#execute store result storage sokoban:obj movable_pot.rnd_seed[0] int 1 run random value 0..3
-#$data merge storage sokoban:tmp {qty:$(qty),id:0}
-#scoreboard players set #for n 0
 $function sokoban:obj/movable_pot/set/id {qty:$(qty)}
 function sokoban:obj/movable_pot/set/flower
+data remove storage sokoban:temp temp

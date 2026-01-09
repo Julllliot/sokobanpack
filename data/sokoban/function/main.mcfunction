@@ -1,3 +1,5 @@
-say oi
+# ## Main reload function
+#
+# @within #load
 
 function sokoban:init
