@@ -9,7 +9,7 @@
 
 execute if entity @e[type=marker,tag=player,limit=1] run function sokoban:player/init
 
-$function julliot:setobj/main {\
+$function julliapi:setobj/main {\
   xyz:[$(coords)],\
   quantity:1,\
   markernbt:'{Tags:["sokoban.entity","player","movable"]}',\

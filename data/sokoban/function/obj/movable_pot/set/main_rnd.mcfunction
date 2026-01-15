@@ -8,7 +8,12 @@
 
 execute if entity @e[type=marker,tag=movable_pot,limit=1] run function sokoban:obj/movable_pot/init
 
-$function julliot:setobj/main {\
+# exception handling
+$scoreboard players set #qty n $(qty)
+$execute if score #qty n matches 5.. run return run tellraw @a[tag=debug] {"text":"[sokoban:movable_pot] FAIL: it only can exist 4 max movable_obj. Has $(qty).","color":"red"}
+scoreboard players reset #qty
+
+$function julliapi:setobj/main {\
   xyz:[$(coords)],\
   markernbt:'{Tags:["so.marker.block","movable_obj","movable_pot","without_id"]}',\
   block:'decorated_pot',\

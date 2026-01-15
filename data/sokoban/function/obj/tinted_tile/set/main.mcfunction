@@ -6,12 +6,12 @@
 #   qty: (int) 1..; quantity of tiles
 
 # exception handling
-execute unless entity @e[type=marker,tag=movable_obj,limit=1] run return run tellraw @a[tag=debug] {"text":"FAIL: movable_obj doesn't exist.","color":"red"}
-$execute as @e[type=marker,tag=movable_obj,sort=arbitrary,limit=$(qty)] unless entity @s[scores={id=0..3}] run return run tellraw @a[tag=debug] {"text":"FAIL: movable_obj doesn't have an id score.","color":"red"}
+execute unless entity @e[type=marker,tag=movable_obj,limit=1] run return run tellraw @a[tag=debug] {"text":"[sokoban:tinted_tile] FAIL: movable_obj doesn't exist.","color":"red"}
+$execute as @e[type=marker,tag=movable_obj,limit=$(qty)] unless entity @s[scores={id=0..3}] run return run tellraw @a[tag=debug] {"text":"[sokoban:tinted_tile] FAIL: movable_obj doesn't have an id score.","color":"red"}
 
 execute if entity @e[type=marker,tag=tinted_tile] run function sokoban:obj/tinted_tile/init
 
-$function julliot:setobj/main {\
+$function julliapi:setobj/main {\
   xyz:[$(coords)],\
   markernbt:'{Tags:["tinted_tile","colorless"]}',\
   quantity:$(qty),\

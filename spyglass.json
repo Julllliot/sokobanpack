@@ -3,7 +3,7 @@
 		"undeclaredSymbol": [
 			{
 				"if": [
-					{ "category": ["function"], "excludeNamespace": "julliot" }
+					{ "category": ["function"], "excludeNamespace": "julliapi" }
 				],
 				"then": { "report": "warning" }
 			}
