@@ -1,7 +1,7 @@
 # ## sets the rare secret characters
 #
-# @context any
-# @within sokoban:player/set/main
+# @context at @e[type=marker,tag=player,limit=1]
+# @within sokoban:player/set/set_player
 
 setblock ~ ~ ~ gray_concrete
 summon item_display ~ ~1.49 ~ {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{properties:[{name:"textures",value:"ewogICJ0aW1lc3RhbXAiIDogMTc2ODE4NjIyNzU2MywKICAicHJvZmlsZUlkIiA6ICI2MTZhYWRjODk1MzM0ZDFiOWZkMTM2NjliN2MxYmNmZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJKdWxsaW9IZW5yaWsiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjQ1MmJjM2Y2OTYwZGE1NGU5MDI0NjVjY2Q3NTIwYThlYzEyYjc5MDFkNjJiN2JmNTdkMTMxNWUwNjFlZTg0MyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9"}]}}},Tags:["sokoban.entity","player"]}

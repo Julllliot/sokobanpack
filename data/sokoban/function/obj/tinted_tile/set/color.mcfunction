@@ -1,6 +1,6 @@
 # ## set respective tile's color
 #
-# @within sokoban:obj/tinted_tile/set/main
+# @within sokoban:obj/tinted_tile/set/set_tinted_tile
 
 execute if entity @s[scores={id=0}] run setblock ~ ~ ~ yellow_glazed_terracotta
 execute if entity @s[scores={id=1}] run setblock ~ ~ ~ light_blue_glazed_terracotta

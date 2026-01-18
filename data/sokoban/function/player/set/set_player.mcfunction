@@ -8,13 +8,17 @@
 #   rot: (int) 0..14; player rotation (0=north,2=northeast,4=east,etc)
 
 execute if entity @e[type=marker,tag=player,limit=1] run function sokoban:player/init
+$scoreboard players set $player_moves n $(player_moves)
+
+# exception handling
+execute if score $player_moves n matches 0 run return run tellraw @a[tag=debug] {"text":"[sokoban:player/set/set_player] FAIL: $player_moves score must not be 0.","color":"red"}
 
 $function julliapi:setobj/main {\
   xyz:[$(coords)],\
   quantity:1,\
   markernbt:'{Tags:["sokoban.entity","player","movable"]}',\
-  block:0,\
-  entity:0,\
+  block:'none',\
+  entity:'none',\
   entitynbt:'{}',\
   temp:'player',\
 }
@@ -31,5 +35,6 @@ execute if score #secret_characters n matches 2 at @e[type=marker,tag=player,lim
 $function sokoban:player/set/id {type:'$(type)',rnd:$(rnd)}
 execute as @e[type=marker,tag=player,limit=1] run function sokoban:player/character/set with storage sokoban:temp temp
 function sokoban:player/set/interaction
+$execute at @e[type=marker,tag=player,limit=1] run function sokoban:script/move/player/display_moves {current_player_moves:$(player_moves)}
 
 data remove storage sokoban:temp temp

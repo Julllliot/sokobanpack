@@ -1,7 +1,7 @@
 # ## get direction of movement based on player's yaw rotation
 #
 # @context as @a[limit=1]
-# @within sokoban:script/move/player/main
+# @within sokoban:script/move/player/move_player
 
 execute store result score #player_yaw n run data get entity @s Rotation[0]
 

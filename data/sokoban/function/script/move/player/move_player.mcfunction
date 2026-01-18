@@ -13,9 +13,10 @@ execute as @n[type=marker,tag=player,distance=..8] at @s run function sokoban:sc
 execute store result storage sokoban:temp temp.move.sound_id int 1 run scoreboard players get @n[type=marker,tag=player,distance=..20] id
 function sokoban:sound/player/step with storage sokoban:temp temp.move
 
-data remove storage sokoban:temp temp
-
 scoreboard players remove $player_moves n 1
-execute if score $player_moves n matches 0 unless function sokoban:lvl/win/condition run function sokoban:lvl/win/fail
-execute if function sokoban:lvl/win/condition run function sokoban:lvl/win/success
+execute if score $player_moves n matches 0 unless function sokoban:lvl/win/condition at @e[type=marker,tag=player,limit=1] positioned ~ ~1.65 ~ run return run function sokoban:lvl/win/fail
+execute if function sokoban:lvl/win/condition at @e[type=marker,tag=player,limit=1] positioned ~ ~1.65 ~ run return run function sokoban:lvl/win/success
+execute store result storage sokoban:temp temp.move.current_player_moves int 1 run scoreboard players get $player_moves n
+execute at @e[type=marker,tag=player,limit=1] run function sokoban:script/move/player/display_player_moves with storage sokoban:temp temp.move
 
+data remove storage sokoban:temp temp

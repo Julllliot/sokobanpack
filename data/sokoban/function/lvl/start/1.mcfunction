@@ -1,6 +1,5 @@
 function sokoban:init
 
-function sokoban:obj/movable_pot/set/main_rnd {coords:"29,1,6, 29,1,8, 27,1,8, 27,1,6, 26,1,9",qty:1}
-function sokoban:obj/tinted_tile/set/main {coords:"30,0,5, 30,0,9, 26,0,9, 26,0,5",qty:1}
-function sokoban:player/set/main {coords:'30,1,7',type:0,rot:12,rnd:true}
-scoreboard players set $player_moves n 11
+function sokoban:obj/movable_tinted_pot/set/set_movable_tinted_pot {coords:"79,1,9",qty:1}
+function sokoban:obj/tinted_tile/set/set_tinted_tile {coords:"77,0,7",qty:1}
+function sokoban:player/set/set_player {coords:"78,1,7",type:0,rot:12,rnd:true,player_moves:16}

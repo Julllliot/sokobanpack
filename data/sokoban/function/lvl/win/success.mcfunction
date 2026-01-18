@@ -1,8 +1,10 @@
-# ## invoked when the player wins the level: all movable_obj are in their respective tile and score #player_moves >= 0
+# ## invoked when the player wins the level: all movable_tinted_obj are in their respective tile and score #player_moves >= 0
 #
-# @context any
-# @within sokoban:lvl/win/condition
+# @context at @e[type=marker,tag=player,limit=1] positioned ~ ~1.65 ~
+# @within sokoban:script/move/player/move_player
 
-kill @e[type=interaction,tag=player,limit=1]
-	title @a actionbar {"text":"YOU WIN!","color":"green"}
+kill @e[type=interaction,tag=player,limit=1,dx=0]
+kill @n[type=text_display,distance=...1]
+title @a actionbar {"text":"YOU WIN!","color":"green"}
+
 playsound block.note_block.harp
