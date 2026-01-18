@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "used": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:filled_map",
+          "components": {
+            "minecraft:item_name": "Select level"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "sokoban:lvl/lvl_select"
+  }
+}

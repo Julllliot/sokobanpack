@@ -22,7 +22,8 @@ $function julliapi:setobj/main {\
   temp:'mvbtintpot'\
 }
 
-$execute as @e[type=marker,tag=movable_tinted_pot,tag=without_id,limit=$(qty)] run scoreboard players set @s global.obj_id 0
+execute as @e[type=marker,tag=movable_tinted_pot] run scoreboard players set @s global.obj_id 0
+$execute as @e[type=marker,tag=movable_tinted_pot,limit=$(qty),tag=without_id] at @s run summon interaction ~ ~ ~ {width:1.01,height:1.1,Tags:["sokoban.entity","movable_tinted_pot","movable_obj"]}
 $function sokoban:obj/movable_tinted_pot/set/id {qty:$(qty)}
 function sokoban:obj/movable_tinted_pot/set/flower
 

@@ -5,7 +5,7 @@
 #   coords: (string) 'x,y,z'
 #   type: (string) 'rnd' || (int) 0..3; player character id
 #   rnd: (bool) choose random character
-#   rot: (int) 0..14; player rotation (0=north,2=northeast,4=east,etc)
+#   rot: (string) north || east || south || west
 
 execute if entity @e[type=marker,tag=player,limit=1] run function sokoban:player/init
 $scoreboard players set $player_moves n $(player_moves)
@@ -34,6 +34,7 @@ execute if score #secret_characters n matches 2 at @e[type=marker,tag=player,lim
 
 $function sokoban:player/set/id {type:'$(type)',rnd:$(rnd)}
 execute as @e[type=marker,tag=player,limit=1] run function sokoban:player/character/set with storage sokoban:temp temp
+$execute as @e[type=item_display,tag=player,limit=1] run function sokoban:player/character/rotation/$(rot)
 function sokoban:player/set/interaction
 $execute at @e[type=marker,tag=player,limit=1] run function sokoban:script/move/player/display_moves {current_player_moves:$(player_moves)}
 

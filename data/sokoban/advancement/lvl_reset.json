@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "used": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:lodestone",
+          "components": {
+            "minecraft:item_name": "Reset level"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "sokoban:lvl/lvl_reset"
+  }
+}

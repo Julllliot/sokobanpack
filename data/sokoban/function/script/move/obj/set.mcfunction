@@ -8,6 +8,7 @@
 
 $clone ~ ~ ~ ~ ~1 ~ $(dir)
 fill ~ ~ ~ ~ ~1 ~ air
+$tp @n[type=interaction,tag=movable_obj,distance=...1] $(dir)
 $tp @s $(dir)
 
 execute store result storage sokoban:temp temp.move.sound_id int 1 run scoreboard players get @s global.obj_id

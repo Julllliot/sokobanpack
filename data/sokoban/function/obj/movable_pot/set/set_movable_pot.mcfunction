@@ -9,7 +9,7 @@ execute if entity @e[type=marker,tag=movable_pot,limit=1] run function sokoban:o
 
 $function julliapi:setobj/main {\
   xyz:[$(coords)],\
-  markernbt:'{Tags:["movable_obj","movable_pot","without_id"]}',\
+  markernbt:'{Tags:["sokoban.entity","movable_obj","movable_pot"]}',\
   block:'decorated_pot',\
   quantity:$(qty),\
   entity:'none',\
@@ -17,4 +17,5 @@ $function julliapi:setobj/main {\
   temp:'mvbpot'\
 }
 
-$execute as @e[type=marker,tag=movable_pot,tag=without_id,limit=$(qty)] run scoreboard players set @s global.obj_id 0
+$execute as @e[type=marker,tag=movable_pot,limit=$(qty)] run scoreboard players set @s global.obj_id 0
+$execute as @e[type=marker,tag=movable_pot,limit=$(qty)] at @s run summon interaction ~ ~ ~ {width:1.01,height:1.1,Tags:["sokoban.entity","movable_pot","movable_obj"]}

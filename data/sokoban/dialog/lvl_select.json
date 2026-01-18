@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Level select",
+  "actions": [
+    {
+      "label": "Level 1",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function sokoban:lvl/set/lvl_set_1"
+      }
+    },
+    {
+      "label": "Level 2",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function sokoban:lvl/set/lvl_set_2"
+      }
+    }
+  ]
+}
