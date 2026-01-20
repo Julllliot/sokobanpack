@@ -1,4 +1,4 @@
-# ## sound for "skeleton" player's step
+# ## sound for "steve" player's step
 #
 # @context any
 # @within sokoban:sound/player/step

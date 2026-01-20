@@ -18,3 +18,4 @@ $execute as @n[type=interaction,tag=player,dx=0] positioned as @s run tp @s $(di
 $execute positioned $(dir) run tp @n[type=text_display,tag=player,distance=..2] ~ ~1.65 ~
 schedule clear sokoban:util/hide_player_text_display
 $tp @s $(dir)
+scoreboard players add $total_moves n 1

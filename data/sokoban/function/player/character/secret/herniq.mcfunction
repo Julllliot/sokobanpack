@@ -1,0 +1,4 @@
+# @within sokoban:player/character/secret_characters
+
+setblock ~ ~ ~ orange_terracotta
+summon item_display ~ ~1.49 ~ {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{properties:[{name:"textures",value:"ewogICJ0aW1lc3RhbXAiIDogMTc2ODk0ODY4Mzk0OSwKICAicHJvZmlsZUlkIiA6ICI5OTg5NmZmZjQwODQ0ZmQ3YjViN2EzNDYyMmE1MWJlYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJLaWtNZWkiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjgzZjQ0ZWJmNTRhOThmMGU0MjUzNjQ1YTQ0MzAzYjc3MTkzYThlOWNlYmRiOGY2MzhlMWI3YWY1YmUzNjFmNyIKICAgIH0KICB9Cn0="}]}}},Tags:["sokoban.entity","player"]}

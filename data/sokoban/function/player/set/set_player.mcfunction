@@ -9,6 +9,7 @@
 
 execute if entity @e[type=marker,tag=player,limit=1] run function sokoban:player/init
 $scoreboard players set $player_moves n $(player_moves)
+$scoreboard players set $best_moves n $(player_moves)
 
 # exception handling
 execute if score $player_moves n matches 0 run return run tellraw @a[tag=debug] {"text":"[sokoban:player/set/set_player] FAIL: $player_moves score must not be 0.","color":"red"}
@@ -27,10 +28,10 @@ $function julliapi:setobj/main {\
 # if (type=="secret") then set secret
 data modify storage sokoban:temp temp.secret_characters set value "secret"
 $execute store success score #secret_characters n run data modify storage sokoban:temp temp.secret_characters set value "$(type)"
-execute if score #secret_characters n matches 0 at @e[type=marker,tag=player,limit=1] run return run function sokoban:player/character/secret
-# by chance (20%)
+execute if score #secret_characters n matches 0 at @e[type=marker,tag=player,limit=1] run return run function sokoban:player/character/secret_characters
+# by chance (2%)
 execute store result score #secret_characters n run random value 0..50
-execute if score #secret_characters n matches 2 at @e[type=marker,tag=player,limit=1] run return run function sokoban:player/character/secret
+execute if score #secret_characters n matches 2 at @e[type=marker,tag=player,limit=1] run return run function sokoban:player/character/secret_characters
 
 $function sokoban:player/set/id {type:'$(type)',rnd:$(rnd)}
 execute as @e[type=marker,tag=player,limit=1] run function sokoban:player/character/set with storage sokoban:temp temp

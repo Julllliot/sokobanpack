@@ -15,6 +15,20 @@
         "type": "minecraft:run_command",
         "command": "function sokoban:lvl/set/lvl_set_2"
       }
+    },
+    {
+      "label": "Level 3",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function sokoban:lvl/set/lvl_set_3"
+      }
+    },
+    {
+      "label": "Level 4",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function sokoban:lvl/set/lvl_set_4"
+      }
     }
   ]
 }

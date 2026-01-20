@@ -7,5 +7,5 @@
 
 function sokoban:util/sort4id
 
-$execute as @e[type=marker,tag=id_sorter,sort=random,limit=$(qty)] run function sokoban:obj/movable_tinted_pot/set/id_handling
+$execute as @e[type=marker,tag=id_sorter,sort=random,limit=$(qty)] run function sokoban:obj/movable_tinted_pot/set/mtpot_id_rnd_handling
 

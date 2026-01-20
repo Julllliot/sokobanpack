@@ -1,4 +1,4 @@
-# ## sets a movable tinted pot with random color
+# ## sets movable tinted pots with random set color
 #
 # @context any
 # @macros
@@ -24,7 +24,8 @@ $function julliapi:setobj/main {\
 
 execute as @e[type=marker,tag=movable_tinted_pot] run scoreboard players set @s global.obj_id 0
 $execute as @e[type=marker,tag=movable_tinted_pot,limit=$(qty),tag=without_id] at @s run summon interaction ~ ~ ~ {width:1.01,height:1.1,Tags:["sokoban.entity","movable_tinted_pot","movable_obj"]}
-$function sokoban:obj/movable_tinted_pot/set/id {qty:$(qty)}
-function sokoban:obj/movable_tinted_pot/set/flower
+execute store result score #temp id run random value 0..3
+$scoreboard players operation @e[type=marker,tag=movable_tinted_pot,limit=$(qty),tag=without_id] id = #temp id
+$function sokoban:obj/movable_tinted_pot/set/mtpot_flower {qty:$(qty)}
 
 data remove storage sokoban:temp temp

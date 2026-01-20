@@ -3,7 +3,8 @@
 		"undeclaredSymbol": [
 			{
 				"if": [
-					{ "category": ["function"], "excludeNamespace": "julliapi" }
+					{ "category": ["function"], "excludeNamespace": "julliapi" },
+					{ "category": ["function"], "excludeNamespace": "skbmusic" }
 				],
 				"then": { "report": "warning" }
 			}
