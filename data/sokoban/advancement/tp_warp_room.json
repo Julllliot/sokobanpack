@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "used": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:recovery_compass",
+          "components": {
+            "minecraft:item_name": "Return to warp room"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "sokoban:player/tp/tp_warp_room"
+  }
+}

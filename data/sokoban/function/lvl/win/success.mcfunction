@@ -9,6 +9,9 @@ data modify entity @n[type=text_display,distance=...1] text set value '§aLevel 
 schedule function sokoban:util/hide_player_text_display 3s
 playsound block.note_block.harp
 
+$function sokoban:script/doors/open/open_door_lvl$(current)
+$function sokoban:script/doors/enter/enter_door_lvl$(current)
+
 execute if entity @a[limit=1,tag=lost_trophy] run return run tellraw @a ["Your moves score: ",{"score":{"name":"$total_moves","objective":"n"}}, "\nBest score: ",{"score":{"name":"$best_moves","objective":"n"}}, "\nTry to get the minimum moves for this level to earn a trophy!"]
 tellraw @a ["Your moves score: ",{"score":{"name":"$total_moves","objective":"n"}}, "\nBest score: ",{"score":{"name":"$best_moves","objective":"n"}}, "\nYou got the best score!"]
 

@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "used": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:magenta_glazed_terracotta",
+          "components": {
+            "minecraft:item_name": "Continue"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "sokoban:lvl/lvl_continue"
+  }
+}
