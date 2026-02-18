@@ -1,5 +1,6 @@
 {
   "values": [
-    "sokoban:main"
+    "sokoban:main",
+    "sokoban:init"
   ]
 }

@@ -29,6 +29,20 @@
         "type": "minecraft:run_command",
         "command": "function sokoban:lvl/set/lvl_set_4"
       }
+    },
+    {
+      "label": "Level 5",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function sokoban:lvl/set/lvl_set_5"
+      }
+    },
+    {
+      "label": "Level 6",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function sokoban:lvl/set/lvl_set_6"
+      }
     }
   ]
 }

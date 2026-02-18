@@ -6,7 +6,7 @@
         "item": {
           "items": "minecraft:recovery_compass",
           "components": {
-            "minecraft:item_name": "Return to warp room"
+            "minecraft:item_name": "Return to Warp Room"
           }
         }
       }

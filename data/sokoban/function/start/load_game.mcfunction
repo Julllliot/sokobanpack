@@ -3,4 +3,3 @@
 # @context any
 
 function sokoban:player/tp/tp_warp_room
-function sokoban:main

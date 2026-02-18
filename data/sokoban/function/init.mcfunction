@@ -1,7 +1,7 @@
 # ## Reinitializes all game objects, entities, schedules and scores
 #
 # @context any
-# @within sokoban:main
+# @within #load
 
 function sokoban:player/init
 function sokoban:obj/movable_tinted_pot/init
